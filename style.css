@@ -1,0 +1,134 @@
+body
+{
+    background: hsl(30, 38%, 92%);
+
+}
+.card
+{
+    height: 55%;
+    width: 35%;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    translate: -50% -50%;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.obj-img
+{
+    content: url(images/image-product-desktop.jpg);
+    height: 100%;
+    width: 45%;
+}
+.current-price,
+.old-price
+{
+   position: absolute;
+   top: 62%;
+   left: 50%;
+   color: hsl(158, 36%, 37%);
+   font-size: 25px;
+   font-family: 'Fraunces', sans-serif;
+}
+.old-price
+{
+    left: 75%;
+    top: 70%;
+    font-size: 10px;
+    text-decoration: line-through;
+    color: gray;
+}
+button
+{
+    background: hsl(158, 36%, 37%);
+    border: none;
+    width: 200px;
+    translate: 225px -50px;
+    color: white;
+    font-size: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.cart
+{
+    height: 16px;
+    width: 15px;
+    translate: -3px 3px;
+}
+.product-name::after
+{
+    position: absolute;
+    font-size: 1.5em;
+    top:15%;
+    left: 50%;
+    content: 'Gabrielle \a Essence Eau \a De Parfum ';
+    white-space: pre;
+    font-family: 'Fraunces', serif;
+}
+.disc::after
+{
+    position:absolute;
+    top: 47%;
+    left: 50%;
+    font-size: 12px;
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;color: rgba(0, 0,0,.5);
+    white-space: pre;
+    content:'A floral, solar and voluptuous \a interpretation composed by \a Olivier Polge,Perfumer-Creatorfor \a the House of CHANEL.';
+}
+@media  (max-width:300px) {
+    .card
+    {
+        height: 90%;
+        width: 90%;
+    }
+    .obj-img
+    {
+       content: url(images/image-product-mobile.jpg);
+       height: 40%; 
+       width: 100%;       
+    }
+   .type
+   {
+     left: 5%;
+     top: 42%;
+     font-size: 10px;
+   }
+   button
+   {
+     translate: 5% 280px;
+     width: 90%;
+   }
+   .current-price
+   {
+     top:77%;
+     left: 5%;
+   }
+   .old-price
+   {
+    top:81.5%;
+    left: 47%;
+   }
+   .disc::after
+   {
+    /* "A floral, solar and voluptuous interpretation composed byOlivier Polge,Perfumer-Creatorfor the House of CHANEL.";
+    */
+    top:66%;
+    left: 6%; 
+    width: 60%;
+     
+    content:'A floral, solar and voluptuous \a interpretation composed by Olivier \a Polge,Perfumer-Creatorfor the House of \a CHANEL.';
+}
+   
+   .product-name::after
+   {
+    position: absolute;
+    top:47%;
+    left: 6%;
+    font-size: 1.7em;
+    white-space: pre;
+    content: 'Gabrielle Essence \a Eau De Parfum ';
+   }
+
+}
